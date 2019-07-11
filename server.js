@@ -16,7 +16,6 @@ app.use( '/', api )
 mongoose.connect('mongodb://localhost/weatherDB' ,  { useNewUrlParser: true })
 
 
-
 // The Server is Listning
 const port = 3000
 app.listen(port , function(){
