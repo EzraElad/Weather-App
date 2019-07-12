@@ -1,11 +1,11 @@
 // const City = require('../server/model/city')
-//  <div class ="updatedAt">${i.updatedAt}</div>
+//  <div class ="updatedAt">${i.current.last_updated}</div>  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2
 class Renderer {
     constructor(){
     }
 
     renderData(allCityData){
-        console.log(allCityData)
+        //console.log(allCityData)
         $('.con').empty()
         for(let i of allCityData){
             const div = ` <div class ="city" id="${i._id}">
@@ -15,7 +15,7 @@ class Renderer {
                 </div>
                 <div class="middle">
                 <div class ="temperature">${i.temperature} <span>&#8451;</span></div><br>
-                <div class ="name">${i.name}</div>
+                <div class ="name">${i.name}</div>${i.country}
                 </div>
             </div>`
             $('.con').append(div)
