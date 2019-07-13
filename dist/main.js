@@ -4,6 +4,7 @@ const tempManager = new TempManager()
 // const Renderer = require('./Renderer')
 const renderer = new Renderer()
 
+
 const loadPage = async function(){
     await tempManager.getDataFromDB()
     renderer.renderData(tempManager.cityData)
@@ -11,7 +12,7 @@ const loadPage = async function(){
 
 const  handleSearch = async function(){
   let cityInput = $(".input").val()
-  cityInput = cityInput[0].toUpperCase() + cityInput.slice(1).toLowerCase()// WORKS
+  cityInput = cityInput[0].toUpperCase() + cityInput.slice(1).toLowerCase()// Eilat
   let x = tempManager.cityData  //all the cities
    console.log(x)
    for(let i = 0 ; i < x.length ; i++ ){
@@ -30,6 +31,7 @@ $('.button').on('click' , function(){
 
 $('body').on('click' , '.delete' , async function(){
     const name = $(this).closest('.city').find('.name').text()
+    //$(this).closest('.city').remove()
     tempManager.removeCity(name)
     await tempManager.getDataFromDB()
     renderer.renderData(tempManager.cityData)
@@ -41,6 +43,16 @@ $('body').on('click' , '.save' ,  function(){
     console.log(name)
     tempManager.saveCity(name)
     renderer.renderData(tempManager.cityData)
+})
+
+$(".x").on('click' , function(){ // DELETES the text from the input
+    $('.input').val(' ')
+})
+
+$('.input').keypress(function(event){ // I CANT PRESS ENTER AND IT WORKS
+    if(event.keyCode == 13){
+      $('.button').click()
+    }
 })
 
 loadPage()

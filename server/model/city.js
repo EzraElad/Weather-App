@@ -5,10 +5,12 @@ const citySchema = new Schema({
     saveDB : String ,
     name : String ,
     country : String ,
-    updatedAt : Date ,
+    updatedAt : String ,
     temperature : Number ,
     condition : String ,
-    conditionPic : String
+    conditionPic : String ,
+    localTime : String ,
+    humidity : Number
 })
 
 const City = mongoose.model('city' , citySchema)

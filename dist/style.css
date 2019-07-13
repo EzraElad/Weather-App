@@ -1,35 +1,60 @@
+ html {
+    height: 100%;
+    /* helps with the background */
+  }
+  
 body{
-    /* background-color: #3191D1 ; */
-    background-image: url("https://image.freepik.com/free-photo/soft-cloudy-is-gradient-pastel-abstract-sky-background-sweet-color_6529-1434.jpg") ;
+    background-image: url("https://image.freepik.com/free-photo/soft-cloudy-is-gradient-pastel-abstract-sky-background-sweet-color_6529-1434.jpg");
+    /* background-image: url("https://images.unsplash.com/photo-1500113018993-b5c64275ed93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60") ; */
     /* font-family: 'DM Serif Text', serif; */
     font-family: 'Quicksand', sans-serif;
-    /* background-image: url("https://images.unsplash.com/photo-1530908295418-a12e326966ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80") */
+
+    /* Keeps the back ground at put */
+    height: 100%;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*UNTIL HERE*/ 
 }
 span {
     content: "\2103";
   }
-.div{
-     
-}
+
 .button{
     border:0 ;
     background-color: transparent;
 }
+.button:active { /*ClickAble button*/
+    transform: translateY(2px);
+  }
 
 i{
     color: aliceblue;
     font-size: 15px;
 }
 
-.con{
-    /* width:411px ;
-    height: 731px; */
-    /* display: grid ; */
-    /* grid-template-columns:  */
+.update{
+    font-size: 10px;
+    margin-top: 1px;
+    /* word-wrap: normal; */
+    text-overflow: inherit ;
+    white-space: nowrap ;
+}
+.lTime{
+    font-size:12px;
+    white-space: nowrap ;
 }
 .city{
+    /* background:rgba(255,255,255,0.5) */
+    background:rgba(64, 114, 103, 0.247);/* Semi Transperent background!!*/
     display: grid ;
-    grid-template-areas: "a b c";
+    grid-template-areas:
+     "a b c";
+    grid-template-columns: 1fr 5fr 1fr;
+    /* grid-template-rows: 0.5fr 4fr ; */
+    /* align-self: center; */
     margin: 10px ;
     padding: 15px;
     border : 0px solid whitesmoke ;
@@ -37,12 +62,14 @@ i{
     color: white;
     align-content: center;
 }
+
 .save{
     justify-content: flex-start;
     color: rgb(92, 91, 91);
-    margin-top: 40px;
-    grid-area: "a" ;
+    margin-top: 30px;
+    grid-area: c ;
     font-size: 20px;
+    margin-left:20px ;
 }
 .save:active{
     height: 15px;
@@ -50,8 +77,9 @@ i{
 }
 
 .delete{
-    margin-top: 40px;
-    grid-area: "a" ;
+    margin-top: 30px;
+    margin-left:20px ;
+    grid-area: c ;
     color: #c45e79;
     font-size: 20px;
 }
@@ -60,7 +88,7 @@ i{
     width: 15px
 }
 input{
-    margin-left: 20px;
+    margin-left: 5px;
     background-color: transparent ;
     color:white;
     font-weight: bolder;
@@ -71,10 +99,20 @@ input{
     color:white;
 }
 .right{
-    grid-area: "c" ;
+    grid-area: a ;
 }
 .middle{
-    grid-area: "b" ;
+    grid-area: b ;
     margin-top: 30px;
     font-size: 20px;
+}
+.x{
+    background: transparent;
+    margin-left : 10px;
+    border : none ;
+}.fa-times{
+   font-size: 12px;
+}
+.fa-tint{
+    font-size: 11px;
 }

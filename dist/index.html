@@ -3,21 +3,49 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Weather App</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="https://fonts.googleapis.com/css?family=DM+Serif+Text&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://kit.fontawesome.com/da685f69c6.js"></script>  
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
 </head>
 <body>
-    <div class="div">
-        <input placeholder="City" type="text" class="input"><button class="button"><i class="fas fa-search"></i></button>
+
+<div class="div">
+        <button class="x"><i class="fas fa-times"></i></button>
+        <input placeholder="City" type="text" class="input">
+        <button class="button"><i class="fas fa-search"></i></button>
     <div class="con"></div>
 </div>
-    <!-- <script src='../server/routes/api.js'></script> -->
+
+<!-- <script id="weather"  type="text/x-handlebars-template">
+    {{#each apartment}}  runs on the appartment
+    <div class="result">
+    <img  src="{{img}}"/>    and refers to each key
+    <div class="l-addr">Address</div>
+    <p class="address">{{address}}</p>
+
+    <div class="l-price">price</div>
+    <p class="price">{{price}}</p>
+    <div>rooms</div>
+    <p class="rooms">{{rooms}}</p>
+    {{#if immediate}}
+    <div class="l-immediate">
+    <p >{{contactDetails.name}}</p>
+    <p >{{contactDetails.email}}</p>
+    </div>
+    {{/if}}
+    {{#if parking}}
+    <div class="l-park">
+    <p>*Parking Avilable*</p>
+    </div>
+    {{/if}}
+    {{/each}}
+</script> -->
+
     <script src='Renderer.js'></script>
     <script src='TempManager.js'></script>
     <script src='main.js'></script>
