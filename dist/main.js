@@ -13,7 +13,7 @@ const loadPage = async function(){
 const  handleSearch = async function(){
   let cityInput = $(".input").val()
   cityInput = cityInput[0].toUpperCase() + cityInput.slice(1).toLowerCase()// Eilat
-  let x = tempManager.cityData  //all the cities
+  let x = tempManager.cityData  //all the saved cities
    console.log(x)
    for(let i = 0 ; i < x.length ; i++ ){
        if(x[i].name === cityInput){
@@ -46,7 +46,7 @@ $('body').on('click' , '.save' ,  function(){
 })
 
 $(".x").on('click' , function(){ // DELETES the text from the input
-    $('.input').val(' ')
+    $('.input').val('') /// PAY ATTTEINTIO
 })
 
 $('.input').keypress(function(event){ // I CANT PRESS ENTER AND IT WORKS
@@ -54,5 +54,9 @@ $('.input').keypress(function(event){ // I CANT PRESS ENTER AND IT WORKS
       $('.button').click()
     }
 })
+
+// $('.damn').on('click' , function(){
+//     console.log($(this).closest('.city').find('.name').text())
+// })
 
 loadPage()

@@ -1,6 +1,6 @@
 // const City = require('../server/model/city')
 //  <div class ="updatedAt">${i.current.last_updated}</div>  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2
-
+//<button class="damn">x</button>
 class Renderer {
     constructor(){
     }
@@ -11,6 +11,7 @@ class Renderer {
         for(let i of allCityData){
             const div = ` <div class ="city" id="${i._id}">
                 <div class ="right">
+                
                 <img src="${i.conditionPic}"/>
                 <p class ="condition">${i.condition}</p>
                 </div>
